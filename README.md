@@ -1,6 +1,9 @@
 Advanced Search Plus (module for Omeka S)
 =========================================
 
+> ***IMPORTANT***: This module is deprecated and has been replaced by the module
+> [Advanced Search] and won’t be updated any more. The upgrade from it is automatic.
+
 > __New versions of this module and support for Omeka S version 3.0 and above
 > are available on [GitLab], which seems to respect users and privacy better
 > than the previous repository.__
@@ -135,6 +138,7 @@ Copyright
 * Copyright Daniel Berthereau, 2018-2021, (see [Daniel-KM] on GitLab)
 
 
+[Advanced Search]: https://gitlab.com/Daniel-KM/Omeka-S-module-AdvancedSearch
 [Advanced Search Plus]: https://gitlab.com/Daniel-KM/Omeka-S-module-AdvancedSearchPlus
 [Omeka S]: https://omeka.org/s
 [AdvancedSearchPlus.zip]: https://gitlab.com/Daniel-KM/Omeka-S-module-AdvancedSearchPlus/-/releases

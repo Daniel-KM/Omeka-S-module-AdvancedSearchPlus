@@ -43,6 +43,8 @@ use Omeka\Api\Adapter\AbstractResourceEntityAdapter;
 use Omeka\Api\Adapter\ItemAdapter;
 use Omeka\Api\Adapter\MediaAdapter;
 use Omeka\Module\AbstractModule;
+use Omeka\Mvc\Controller\Plugin\Messenger;
+use Omeka\Stdlib\Message;
 
 class Module extends AbstractModule
 {
@@ -67,6 +69,15 @@ class Module extends AbstractModule
 
     public function install(ServiceLocatorInterface $services): void
     {
+        $messenger = new Messenger();
+        $message = new Message(
+            'This module is deprecated and has been superceded by %sAdvanced Search%s. The upgrade from it is automatic.', // @translate
+            '<a href="https://gitlab.com/Daniel-KM/Omeka-S-module-AdvancedSearch" target="_blank">',
+            '</a>'
+        );
+        $message->escapeHtml(false);
+        $messenger->addWarning($message);
+
         $this->initSettings($services);
     }
 
