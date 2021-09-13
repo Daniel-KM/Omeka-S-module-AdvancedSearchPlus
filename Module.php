@@ -86,7 +86,7 @@ class Module extends AbstractModule
         $settings = $services->get('Omeka\Settings');
         $settings->delete('advancedsearchplus_restrict_used_terms');
 
-        $connection = $this->getServiceLocator()->get('Omeka\Connection');
+        $connection = $services->get('Omeka\Connection');
         $sql = 'DELETE FROM `site_setting` WHERE `id` = "advancedsearchplus_restrict_used_terms";';
         $connection->exec($sql);
     }
